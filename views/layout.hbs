@@ -3,6 +3,7 @@
   <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     {{{body}}}
@@ -31,5 +32,22 @@
 //  textinput.value = fileinput.value;
 //  console.log(fileinput, textinput)
 // }
+
+$('#Form-1').submit(function(e){
+  e.preventDefault();
+  $.ajax({
+    url: "/save",
+    dataType: 'json',
+    type: 'post',
+    data: $('#Form-1').serialize(),
+    success: function(response){
+      if(response.success){
+        console.log('success')
+      }else{
+        console.log('failure');
+      }
+    }
+  });
+});
 </script>
 </html>
