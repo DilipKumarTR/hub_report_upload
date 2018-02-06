@@ -1,0 +1,94 @@
+<div>
+    <img class="someClass" src="https://www.hubinternational.com/Assets/Hub/images/logo/HUB-Horizontal-With-Roundel.png" >
+    <p>Welcome to {{title}}</p>
+</div>
+
+<div>
+	{{#if data}}
+	  <form action="save()">
+		  Quote Request For:<br>
+		  <input type="text" name="firstname" value="{{data.QuoteRequestFor}}"><br>
+		  Requested Effective Date:<br>
+		  <input type="text" name="lastname" value="{{data.RequestedEffectiveDate}}"><br>
+		  Plans:<br>
+		  <input type="text" name="firstname" value="{{data.Plans}}"><br>
+		  Deductible:<br>
+		  <input type="text" name="lastname" value="{{data.Deductible}}"><br>
+		  Proposed Insured:<br>
+		  <input type="text" name="firstname" value="{{data.ProposedInsured}}"><br>
+		  Address:<br>
+		  <input type="text" name="lastname" value="{{data.Address}}"><br>
+		  Contact:<br>
+		  <input type="text" name="firstname" value="{{data.Contact}}"><br>
+		  Phone #:<br>
+		  <input type="text" name="lastname" value="{{data.[Phone#]}}"><br>
+		  Nature of Business:<br>
+		  <input type="text" name="firstname" value="{{data.[Nature of Business:]}}"><br>
+		  SIC #⇒:<br>
+		  <input type="text" name="lastname" value="{{data.[SIC #⇒:]}}"><br>
+		  FEIN:<br>
+		  <input type="text" name="firstname" value="{{data.FEIN}}"><br>
+		  Type of Business:<br>
+		  <input type="text" name="lastname" value="{{data.TypeofBusiness}}"><br>
+		  Employer Contributes:<br>
+		  <input type="text" name="firstname" value="{{data.EmployerContributes}}"><br>
+		  Wait Period For New Hires:<br>
+		  <input type="text" name="lastname" value="{{data.WaitPeriodForNewHires}}"><br>
+		  Eligible Employees Must Work:<br>
+		  <input type="text" name="firstname" value="{{data.EligibleEmployeesMustWork}}"><br>
+		  CURRENT PLAN and RATE INFORMATION:<br>
+		  <input type="text" name="lastname" value="{{data.[CURRENTPLAN&RATEINFORMATION]}}"><br>
+		  PLEASE NOTE:<br>
+		  <input type="text" name="firstname" value="{{data.PLEASENOTE}}"><br>
+		  Total Number Of Employees In Employment Force:<br>
+		  <input type="text" name="lastname" value="{{data.[Total Number Of Employees In Employment Force:]}}"><br>
+		  Total Number Of Part-Time, Temporary, Seasonal Employees or Not Eligible (contracted employee):<br>
+		  <input type="text" name="firstname" value="{{data.[Total Number Of Part-Time, Temporary, Seasonal Employees or Not Eligible (contracted employee):]}}"><br>
+		  Total Number Of Newly-Hired Employees In Wait Period:<br>
+		  <input type="text" name="lastname" value="{{data.[TotalNumberOfNewly-HiredEmployeesInWaitPeriod]}}"><br>
+		  Total Number Of Employees Declining Coverage with other coverage:<br>
+		  <input type="text" name="firstname" value="{{data.TotalNumberOfEmployeesDecliningCoveragewithothercoverage}}"><br>
+		  Total Number Of Employees Declining Coverage without coverage:<br>
+		  <input type="text" name="lastname" value="{{data.TotalNumberOfEmployeesDecliningCoveragewithoutcoverage}}"><br>
+		  Total Number Of Employees Expected To Enroll:<br>
+		  <input type="text" name="firstname" value="{{data.TotalNumberOfEmployeesExpectedToEnroll}}"><br>
+		  Total Number Of COBRA Participants:<br>
+		  <input type="text" name="lastname" value="{{data.TotalNumberOfCOBRAParticipants}}"><br>
+		  ADDITIONAL NOTES:<br>
+		  <input type="text" name="lastname" value="{{data.[ADDITIONAL NOTES:]}}"><br>
+		  <br>
+		  <input type="submit" value="Submit">
+		</form>
+	{{else}}
+		<p>No records found. Please upload a file</p>
+	{{/if}}
+	<!-- <button class="login">Upload</button> -->
+	<div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar"></div>
+            </div>
+            <button class="btn btn-lg upload-btn" type="button">Upload File</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="javascripts/upload.js"></script>
+
+	<!-- <button onclick="myFunction()">Upload</button> -->
+
+	<!-- <input type="file" id="browse" name="fileupload" style="display: none" onChange="Handlechange();"/>
+ <input type="hidden" id="filename" readonly="true"/>
+ <input type="button" value="Upload MB" id="fakeBrowse" onclick="HandleBrowseClick();"/> -->
+</div>
+
